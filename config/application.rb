@@ -29,5 +29,8 @@ module Exelixi
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+    
+    # Don't generate assets files(helpers, stylesheets and javascripts).
+    config.generators.assets = false
   end
 end

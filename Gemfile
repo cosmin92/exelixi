@@ -50,6 +50,27 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
+group :test do
+    # Adds support for Capybara system testing and selenium driver
+    gem 'capybara', '>= 2.15', '< 4.0'
+    gem 'selenium-webdriver'
+    # Easy installation and use of chromedriver to run system tests with Chrome
+    gem 'chromedriver-helper'
+
+    # Use rspec-rails testing framework for unit testing
+    gem 'rspec-rails', '~> 3.7', '>= 3.7.2'
+
+    # Use factory_bot for fixtures replacement 
+    gem 'factory_bot_rails'
+
+    # Use cucumber-rails for integration tests
+    gem 'cucumber-rails', require: false
+    
+    # database_cleaner is not required, but highly recommended for cucumber
+    gem 'database_cleaner'
+
+end
+
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
